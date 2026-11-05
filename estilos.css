@@ -1,0 +1,420 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcf8fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Banner de cabeçalho com imagem de fundo */
+header {
+    background: linear-gradient(rgba(107, 70, 193, 0.75), rgba(213, 63, 140, 0.75));
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.header-overlay h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header-overlay p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-weight: 300;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #fff;
+    color: #d53f8c;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #6b46c1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fed7e2;
+}
+
+/* Containers das seções */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    min-height: 60vh; /* Garante que a página não fique esmagada ou curta demais */
+}
+
+.secao-container {
+    background: #ffffff;
+    padding: 3rem 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(107, 70, 193, 0.05);
+}
+
+.secao-container h2 {
+    color: #6b46c1;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.bg-destaque {
+    background: linear-gradient(180deg, #ffffff, #fff5f7);
+    border-left: 6px solid #d53f8c;
+}
+
+/* Grid de Projetos */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card-projeto {
+    background: #fdfdfd;
+    border: 1px solid #ebd7f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-projeto h3 {
+    color: #d53f8c;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.card-projeto p {
+    padding: 0 1rem 1.5rem 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Grid de Depoimentos */
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-depoimento {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #6b46c1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.card-depoimento p {
+    font-style: italic;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.card-depoimento cite {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #718096;
+    display: block;
+}
+
+/* Bloco do Pix */
+.txt-ajuda {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a5568;
+}
+
+.bloco-pix {
+    max-width: 550px;
+    margin: 0 auto;
+    border: 2px dashed #d53f8c;
+    border-radius: 12px;
+    padding: 2rem;
+    background: #fffafc;
+}
+
+.bloco-pix h3 {
+    text-align: center;
+    color: #6b46c1;
+    margin-bottom: 1.5rem;
+}
+
+.pix-detalhes {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.qr-code-falso {
+    width: 130px;
+    height: 130px;
+    background: #f7fafc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #6b46c1; /* Borda na cor roxa da sua identidade */
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #6b46c1;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(107, 70, 193, 0.1);
+}
+
+/* Adiciona um efeito estético simulando as linhas de escaneamento de um app */
+.qr-code-falso::before {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.qr-code-falso::after {
+    content: "PIX SIMULADO";
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    color: #d53f8c;
+}
+
+.pix-dados p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+#btnCopiarPix {
+    background-color: #d53f8c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* altera para roxo ao passar o mouse que é a identidade da ONG  */
+#btnCopiarPix:hover {
+    background-color: #6b46c1; 
+}
+
+/* Nova classe que o JavaScript vai ativar após o clique */
+#btnCopiarPix.sucesso {
+    background-color: #28a745; /* Verde de sucesso */
+    color: white;
+}
+
+#btnCopiarPix.sucesso:hover {
+    background-color: #218838; /* Um verde um pouco mais escuro ao passar o mouse */
+}
+/* ========================================= */
+
+/* Formulário de Cadastro */
+#formCadastro {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.campo-grupo {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-grupo label {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #4a5568;
+}
+
+.campo-grupo input, .campo-grupo select, .campo-grupo textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%; /* Garante o alinhamento no grid/flex */
+    font-family: inherit; /* Mantém a mesma fonte nas caixas de texto */
+    resize: vertical; /* Permite o usuário aumentar o tamanho apenas para baixo */
+}
+
+.btn-enviar {
+    width: 100%;
+    background-color: #6b46c1;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #553c9a;
+}
+
+.mensagem-sucesso {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #c6f6d5;
+    color: #22543d;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a202c;
+    color: #a0aec0;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.85rem;
+    margin-top: 4rem;
+}
+
+/* Grid de Diretrizes (Missão, Visão e Valores) */
+.grid-diretrizes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card-diretriz {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-diretriz:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(107, 70, 193, 0.1);
+}
+
+
+/* =====================================================
+   AJUSTES PARA DISPOSITIVOS MÓVEIS (Telas até 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+    /* Ajusta o tamanho do banner principal para celulares */
+    header {
+        padding: 4rem 1rem;
+    }
+
+    .header-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .header-overlay p {
+        font-size: 1.1rem;
+    }
+
+    /* Transforma o menu de navegação em coluna para facilitar o clique */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Ajusta o espaçamento do container principal */
+    main {
+        padding: 0 0.5rem;
+        margin: 1rem auto;
+    }
+
+    .secao-container {
+        padding: 2rem 1rem;
+    }
+
+    /* Modifica o bloco do PIX para que o QR Code e os textos fiquem empilhados verticalmente */
+    .pix-detalhes {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+   
+}
+

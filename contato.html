@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Voluntária - Instituto Seja Forte e Corajosa</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-overlay">
+            <h1>Apoie Nossa Rede</h1>
+            <p>Faça seu cadastro fictício de voluntariado ou colabore com as ações da ONG.</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Quem Somos</a></li>
+            <li><a href="projetos.html">Nossos Projetos</a></li>
+            <li><a href="contato.html">Seja Voluntário(a)</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="secao-container">
+            <h2>Faça Parte da Nossa Rede</h2>
+            <p class="txt-ajuda">Preencha os campos abaixo. Todos os quatro campos são obrigatórios conforme regras acadêmicas.</p>
+            
+            <!-- Div para exibição das mensagens do JS -->
+            <div id="statusForm" class="oculto" style="margin-bottom: 1.5rem; padding: 1rem; border-radius: 6px; font-weight: bold; text-align: center;"></div>
+
+            <form id="formCadastro">
+                <div class="campo-grupo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                 </div>
+
+                <div class="campo-grupo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required placeholder="seuemail@exemplo.com">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="assunto">Assunto / Interesse:</label>
+                    <input type="text" id="assunto" placeholder="Ex: Voluntariado em costura" required>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagem">Sua Mensagem / Apresentação:</label>
+                    <textarea id="mensagem" rows="5" placeholder="Conte-nos um pouco sobre suas motivações..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Cadastro</button>
+            </form>
+        </section>
+
+        <section class="secao-container">
+            <h2>Doações Simuladas</h2>
+            <p class="txt-ajuda">Ajude a financiar a compra de materiais para os nossos cursos profissionalizantes.</p>
+            
+            <div class="bloco-pix">
+    <h3>Contribua via PIX (Simulação)</h3>
+    <div class="pix-detalhes" style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
+        
+        <!-- Caixa do QR Code com tamanho fixo e controlado -->
+        <div class="qr-code-falso" style="width: 150px; height: 150px; min-width: 150px; background-color: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <img src="qr-code.jpg" alt="QR Code PIX" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+        </div>
+        
+        <div class="pix-dados" style="flex: 1; min-width: 200px;">
+            <p style="margin: 0px 0px 0.5rem;"><strong>Chave PIX:</strong> 00.000.000/0001-00</p>
+            <p style="margin: 0px 0px 0.5rem;"><strong>Banco:</strong> Banco do Bem S.A.</p>
+            <p style="margin: 0px 0px 0.5rem;"><strong>Nome:</strong> Instituto Seja Forte e Corajosa</p>
+            <button type="button" id="btnCopiarPix">📋 Copiar Chave PIX</button>
+        </div>
+
+    </div>
+</div>
+        </section>
+
+        <!-- BOTÃO DE RETORNO À TELA INICIAL (Dentro do local correto no main) -->
+        <div style="text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+            <a href="index.html" class="btn-principal" style="background-color: #6b46c1; color: white;">← Voltar para a Página Inicial</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Instituto Seja Forte e Corajosa. Projeto Acadêmico Sem Fins Lucrativos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
